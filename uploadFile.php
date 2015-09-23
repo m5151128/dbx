@@ -3,7 +3,7 @@
 require_once 'dbxClient.php';
 use \Dropbox as dbx;
 
-class fileUpload extends dbxClient {
+class uploadFile extends dbxClient {
 
     function upload($dropboxPath, $filePath = null, $fileName) {
         $response = @file_get_contents($filePath . $fileName, false, $context);
@@ -23,4 +23,4 @@ $fileName = 'upload.jpg';
 $filePath = null;
 $dropboxPath = '/';
 
-print_r((new fileUpload())->upload($dropboxPath, $filePath, $fileName));
+print_r((new uploadFile())->upload($dropboxPath, $filePath, $fileName));
