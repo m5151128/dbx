@@ -1,7 +1,6 @@
 <?php
 
 require_once 'dbxClient.php';
-use \Dropbox as dbx;
 
 class downloadFile extends dbxClient {
 
