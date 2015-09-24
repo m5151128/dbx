@@ -3,8 +3,8 @@
 require_once 'vendor/autoload.php';
 use \Dropbox as dbx;
 
-class dbxClient {
-
+class dbxClient
+{
     public function __construct()
     {
         $accessToken = "Your Dropbox API app access token";

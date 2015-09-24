@@ -2,9 +2,10 @@
 
 require_once 'dbxClient.php';
 
-class getAccountInfo extends dbxClient {
-
-    function getData() {
+class getAccountInfo extends dbxClient
+{
+    function getData()
+    {
         return $this->dbxClient->getAccountInfo();
     }
 }

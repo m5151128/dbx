@@ -2,9 +2,10 @@
 
 require_once 'dbxClient.php';
 
-class downloadFile extends dbxClient {
-
-    function download($dropboxPath, $downloadPath = null, $fileName) {
+class downloadFile extends dbxClient
+{
+    function download($dropboxPath, $downloadPath = null, $fileName)
+    {
         $f = fopen($downloadPath . $fileName, "w+b");
         $metadata = $this->dbxClient->getFile($dropboxPath . $fileName, $f);
         fclose($f);

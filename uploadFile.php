@@ -3,9 +3,10 @@
 require_once 'dbxClient.php';
 use \Dropbox as dbx;
 
-class uploadFile extends dbxClient {
-
-    function upload($dropboxPath, $filePath = null, $fileName) {
+class uploadFile extends dbxClient
+{
+    function upload($dropboxPath, $filePath = null, $fileName)
+    {
         $response = @file_get_contents($filePath . $fileName, false, $context);
         if (! $response) {
             return $filePath . $fileName . ' not found' . PHP_EOL;
