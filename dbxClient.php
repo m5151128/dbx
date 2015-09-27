@@ -8,7 +8,8 @@ class dbxClient
     public function __construct()
     {
         $accessToken = "Your Dropbox API app access token";
-        $clientIdentifier = 'examples-account-info';
+        // $clientIdentifier = 'examples-account-info';
+        $clientIdentifier = "Your Dropbox API app key or app secret";
 
         $this->dbxClient = new dbx\Client($accessToken, $clientIdentifier);
     }
